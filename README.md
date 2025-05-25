@@ -5,13 +5,13 @@ This project demonstrates **basic point-to-point LoRa communication** using two 
 
 ## 📦 Project Structure
 
-
+```
 /lora-arduino-project/
 │
-├── tx\_lora.ino       # Transmitter Arduino code
-├── rx\_lora.ino       # Receiver Arduino code
+├── tx_lora.ino       # Transmitter Arduino code
+├── rx_lora.ino       # Receiver Arduino code
 └── README.md         # This documentation file
-
+```
 
 ---
 
