@@ -1,14 +1,16 @@
+
 # 🚀 Arduino LoRa Communication with RA-02 SX1278
 
 This project demonstrates **basic point-to-point LoRa communication** using two Arduino UNO boards and RA-02 SX1278 LoRa modules. It uses the **RadioHead** library for SPI communication between the microcontroller and LoRa module.
 
 ## 📦 Project Structure
 
+
 /lora-arduino-project/
 │
-├── tx_lora.ino # Transmitter Arduino code
-├── rx_lora.ino # Receiver Arduino code
-└── README.md # This documentation file
+├── tx\_lora.ino       # Transmitter Arduino code
+├── rx\_lora.ino       # Receiver Arduino code
+└── README.md         # This documentation file
 
 
 ---
@@ -76,3 +78,48 @@ Ensure both transmitter and receiver are using the **same frequency**:
 
 ```cpp
 #define RF95_FREQ 433.0  // MHz
+```
+---
+
+## 🧪 Usage Steps
+
+1. Upload `tx_lora.ino` to one Arduino (Transmitter)
+2. Upload `rx_lora.ino` to another Arduino (Receiver)
+3. Open **Serial Monitor** on both boards (baud rate: 9600)
+4. You should see the transmitter sending messages, and the receiver printing them
+
+---
+
+## 🛠️ Troubleshooting
+
+* **No message received?**
+
+  * Double-check wiring and pin numbers
+  * Make sure both use same frequency
+  * Ensure both modules are powered with **stable 3.3V**
+  * Add decoupling capacitors if voltage drops
+
+* **RA-02 gets hot or fails?**
+
+  * Likely powered with 5V — use 3.3V only
+
+* **Message corrupt or missing?**
+
+  * Keep modules at least 1 meter apart during testing
+  * Use antenna to improve signal stability
+
+---
+
+## 📚 Notes
+
+* This example uses **LoRa (not LoRaWAN)**. It’s point-to-point only.
+* For LoRaWAN (e.g., The Things Network), consider modules with built-in LoRaWAN stack (RAK811, ESP32 LoRa, etc.)
+
+---
+
+## 🧑‍💻 Author
+
+Developed by Alif Jamaludin
+If you use this project, consider crediting or sharing improvements!
+
+---
